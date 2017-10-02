@@ -3,13 +3,13 @@
 
 function barf(callback){
   let catData = {
-    dweebyCat: "Mody"
+    dweebyCat: "Moby"
   };
-  callback(data);
+  callback(catData);
 }
 
-barf(function(data){
-  console.log(data.dweebyCat);
+barf((data)=>{
+  console.log(data.dweebyCat + " is a dweeb.");
 });
 
 //convert the callback function above to use arrow notation. 

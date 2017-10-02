@@ -10,6 +10,12 @@ class Song {
   }
 }
 
+let psychoKiller = new Song("Talking Heads", "Psycho Killer");
+console.log(psychoKiller.getTitle());
+let stevie = new Song("Stevie Wonder", "Superstition");
+console.log(stevie.getTitle());
+
+export {Song};
 //Exercise:
 
 //Add a method to the Song class that returns the string "title is {title} by {artist}.

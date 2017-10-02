@@ -3,10 +3,10 @@
 
 function es6Rulz() {
 
-  var strawHat4you = "we need this string l8r";
+  let strawHat4you = "we need this string l8r";
   
   if (true) {
-    strawHat4you = "i messed it all up";
+    let strawHat4you = "i messed it all up";
     //console log 1
     console.log(strawHat4you);
   }
