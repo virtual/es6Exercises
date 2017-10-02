@@ -5,21 +5,21 @@
 
 function queryFirstDoc(callback) {
   setTimeout(() => {
-    var doc1 = {dumbProp: "dumbValue"};
+    let doc1 = {dumbProp: "dumbValue"};
     callback(doc1);
   }, 2000);
 };
 
 function querySecondDoc(callback) {
   setTimeout(() => {
-    var doc2 = {dumbProp2: "dumbValue2"};
+    let doc2 = {dumbProp2: "dumbValue2"};
     callback(doc2);
   }, 2000);
 };
 
 function queryThirdDoc(callback, err) {
   setTimeout(() => {
-    var doc3 = {dumbProp3: "dumbValue3"};
+    let doc3 = {dumbProp3: "dumbValue3"};
     if (doc3){
       callback(doc3);
     } else {
@@ -27,8 +27,20 @@ function queryThirdDoc(callback, err) {
     }
   }, 2000);
 };
-
-
+// queryThirdDoc(console.log);
+let str = 'We finally have all our docs - ';
+queryFirstDoc((str1)=>{
+  str = str.concat(str1.dumbProp + " ");
+  querySecondDoc((str1)=>{
+    str = str.concat(str1.dumbProp2 + " ");
+    queryThirdDoc((str1)=>{
+      str = str.concat(str1.dumbProp3);
+      console.log(str);
+    }, (err)=>{ 
+      console.log(err); 
+    });
+  });
+});
 //Exercise 1: using these functions, generate a string that says 
 // We finally have all our docs - {dumbProp1}, {dumbProp2}, {dumpProp3}
 
