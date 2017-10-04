@@ -33,3 +33,24 @@ class Quokka extends Animal()  {
 /* import & export 
   module.exports = functionName;
 */
+
+/*
+
+componentWillMount()
+componentDidMount() {
+  // first 
+
+  react component musefind engineering, lifecycle
+  constructor > componentWillMount > render > componentDidMount
+}
+
+STATE
+water & ice (state of water)
+
+this.state should be an object so it's easier to change in the future
+modify state using 
+this.setState({
+  count: updatedNum
+});
+
+*/
